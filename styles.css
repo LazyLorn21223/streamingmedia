@@ -1,0 +1,340 @@
+/*Mobile First*/
+html {
+    background-color: #020659;
+}
+body{
+    font-family:Verdana, Geneva, Tahoma, sans-serif ;
+    background-color: #ffffff;
+    color: #ffffff;
+    width:375px;
+}
+header{
+    width:100%;
+    height:150px;
+    background:linear-gradient(90deg,#2104D9 0%, #000000 100%);
+    margin-top: 140px;
+}
+
+header p{
+    position: absolute;
+    top: 170px;
+    width:375px;
+    margin: 20px;
+}
+nav {
+    position: absolute;
+    top: 0;
+    background-color: #020873;
+    width:375px;
+    height:150px;
+}
+nav ul{
+    background-color: #020873;
+    text-align: center;
+    margin: 20px;
+    list-style: none;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+    text-transform: uppercase;
+    justify-content: center;
+}
+nav h1 {
+    text-transform: lowercase;
+    font-variant: small-caps;
+    font-size: 1.25em;
+}
+nav h2 {
+    visibility: hidden;
+    height: 1px;
+}
+nav li a {
+    display: block;
+    padding: 20px;
+    text-decoration: none;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+nav img{
+    justify-content: center;
+    width: 50px; 
+    height: 50px; 
+    border-radius: 50%; 
+    object-fit: cover;
+}
+nav a:hover, nav input:hover {
+    background-color: #590242;
+}
+
+label {
+    cursor: pointer;
+    display: inline-block;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+}
+label span {
+    background-color: #ffffff;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background-color .2s ease-out;
+    width: 18px;
+}
+label span:before, label span:after {
+    background: #ffffff;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+label span:before {
+    top: 5px;
+}
+label span:after {
+    top: -5px;
+}
+input {
+    display: none;
+}
+input:checked ~ ul {
+    max-height: 500px;
+}
+input:checked ~ label span {
+    background: transparent;
+}
+input:checked ~ label span:before {
+    transform: rotate(-45deg);
+}
+input:checked ~ label span:after {
+    transform: rotate(45deg);
+}
+input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps) span:after {
+    top: 0;
+}
+
+.scroll{
+    display:grid;
+    grid-template-columns: repeat(5, 1fr);
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.scroll section{
+    margin: 10px;
+    position: relative;
+}
+
+.scroll div {
+    position: absolute;
+    top: 200px;
+    background-color: rgba(255, 255, 255,.75);
+    padding: 10px;
+    height: 50px;
+    width: 350px;
+}
+
+dl{
+    display: flex;
+    color:#590242;
+    position: absolute;
+    bottom: 1px;
+}
+
+dt{
+    padding-right: 5px;
+    padding-top: 0;
+}
+
+dd{
+    font-style: italic;
+    margin-left:0;
+}
+
+ main a {
+    text-decoration: none;
+    background-color: #590242;
+    color: #ffffff;
+    border-radius: 5px;
+    padding: 5px;
+    width: 150px;
+    display: block;
+    text-align: center;
+    justify-content: right;
+    margin-left: 10px;
+}
+
+    a:hover {
+    background-color: #020659;
+}
+   
+#trending {
+    display: grid;
+    height: 415px;
+    width: 100%;
+}
+
+#trending ::-webkit-scrollbar {
+    width: 15px;
+}
+#trending ::-webkit-scrollbar-track {
+    box-shadow: inset 00 15px #590242;
+}
+#trending ::-webkit-scrollbar-thumb {
+    background: #590242;
+    border-radius: 5px;
+}
+#trending ::-webkit-scrollbar-thumb:hover {
+    background: #020659;
+}
+#trending h3{
+    margin-top: 0;
+}
+
+audio ::-webkit-media-controls-mute-button {
+    background-color: #ffffff;
+    border-radius: 50%;
+}
+audio ::-webkit-media-controls-play-button {
+    background-color: #ffffff;
+    border-radius: 50%;
+}
+audio ::-webkit-media-controls-enclosure {
+    background-color: rgba(255, 255, 255, .5);
+}
+audio {
+    position: absolute;
+    bottom: 150px;
+    left: 5px;
+}
+
+.playlist-container{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    overflow: scroll;
+}
+.playlist-container h3 {
+    color:#ffffff;
+}
+#playlists .scroll{
+    background-color: #2699FB
+}
+
+#curated .scroll{
+    background-color: #020873
+}
+#playlists section {
+    text-align: center;
+    background-color:#0D8DFB;
+}
+
+#curated section {
+    text-align: center;
+    background-color:#020659;
+}
+
+#playlists ::-webkit-scrollbar, #curated ::-webkit-scrollbar {
+    width: 15px;
+}
+#playlists ::-webkit-scrollbar-track, #curated ::-webkit-scrollbar-track  {
+    box-shadow: inset 0 0 15px #020659;
+}
+#playlists ::-webkit-scrollbar-thumb, #curated ::-webkit-scrollbar-thumb {
+    background: #020659;
+    border-radius: 5px;
+}
+#playlists ::-webkit-scrollbar-thumb:hover, #curated ::-webkit-scrollbar-thumb:hover {
+    background: #ffffff
+}
+
+h1 {
+    font-size: 1.25em;
+    line-height: 2em;
+}
+h1, h2 {
+    padding: 5px 25px;
+}
+
+h1, h2, h3 {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+h2, h3 {
+    font-size: 1em;
+    color: #590242;
+    line-height: 2em;
+}
+
+p, dl, dd {
+    font-size: 1em;
+}
+
+footer p {
+    font-size: .75em;
+    display: block;
+    color:#590242;
+    text-align: center;
+    margin: 0;
+}
+
+@media screen and (min-width: 834px) {
+body{
+    width: 834px;
+    margin: 0 auto;
+}
+header p{
+    width:834px;
+}
+nav {
+    width:834px;
+}
+nav ul {
+    width: 834px;
+    overflow: visible;
+    position: absolute;
+    top: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    padding:0px;
+}
+label span, input {
+    display: none;
+}
+main a{
+    position: absolute;
+}
+#trending a {
+    margin-left:650px;
+}
+.scroll div {
+    position: absolute;
+    top: 230px;
+}
+
+.playlist-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    max-width:834px;
+}
+.playlist-container p{
+    grid-column-start: 2;
+    position:absolute;
+    top:35px;
+    right: 10px;
+}
+#playlists section, #curated section{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.playlist-container .scroll{
+    display: block;
+    overflow-x: scroll;
+    overflow-y:auto;
+    max-height: 500px;
+}
+}
